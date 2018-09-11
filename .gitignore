@@ -1,0 +1,15 @@
+# virtualenv stuff
+lib
+bin
+include
+pyvenv.cfg
+pip-selfcheck.json
+
+# misc
+.vscode
+**/*.pyc
+**/*.docx
+**/*.test.py
+
+# crawler
+crawler/pages
