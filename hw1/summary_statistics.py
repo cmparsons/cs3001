@@ -40,7 +40,7 @@ def get_standard_deviation(l):
 
 def get_median(l):
     n = len(l)
-    sorted_data = sorted(l)
+    sorted_data = merge_sort(l)
 
     if n % 2 != 0:
         return sorted_data[(n+1)//2]
@@ -49,7 +49,7 @@ def get_median(l):
 
 
 def get_percentile(quartile, data):
-    sorted_data = sorted(data)
+    sorted_data = merge_sort(data)
     observation = int((quartile / 100) * (len(data) + 1))
     return sorted_data[observation]
 
