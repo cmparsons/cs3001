@@ -7,8 +7,6 @@ import os
 PAGES_DIR = 'crawler/pages/'
 
 def crawl(seed, url_limit=10):
-    # TODO: Fix regex
-    # mst_pattern = re.compile('(https?:\/\/(?:www\.|(?!www))\.mst\.edu?\\)')
     mst_pattern = re.compile('\.mst\.edu')
 
     frontier = [seed]
@@ -33,10 +31,9 @@ def crawl(seed, url_limit=10):
             for tag in soup(["script", "style"]):
                 tag.decompose()
 
-            print('Saving {} to {}'.format(soup.title.string, filename))
+            print('Saving url: {} title: {} to file: {}'.format(current_url, soup.title.string, filename))
             f.write(soup.prettify())
 
-        # NOTE: re.search is a temp solution. Would rather use re.match
         # Get all mst domain links on the page
         mst_tags = [str(a.get('href')) for a in soup.find_all('a') if mst_pattern.search(str(a.get('href'))) != None]
 
