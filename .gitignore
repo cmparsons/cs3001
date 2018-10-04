@@ -11,5 +11,8 @@ pip-selfcheck.json
 **/*.docx
 **/*.test.py
 
+# excel
+**/*.xls
+
 # crawler
 crawler/pages
