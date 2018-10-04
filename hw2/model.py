@@ -3,12 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-"""
-NOTE:
-    - Need help on 9, 10, 14 with doing and understanding correlation with categorical values
-    - Understanding what features to drop in the model with the histogram questions
-"""
-
 
 def main():
     # Manually specify category types for pandas. Everything else will be interpreted like it should
