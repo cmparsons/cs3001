@@ -10,6 +10,7 @@ pip-selfcheck.json
 **/*.pyc
 **/*.docx
 **/*.test.py
+**/*.pdf
 
 # excel
 **/*.xls
